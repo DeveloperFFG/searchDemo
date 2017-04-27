@@ -7,6 +7,7 @@
 //
 
 #import "SearchResultController.h"
+#import "UserDetailController.h"
 #import "UserInfo.h"
 #import "UserCell.h"
 
@@ -118,6 +119,23 @@
                             @"inputMark":@(self.inputMark)
                             }
                afterDelay:0.5];
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UserDetailController *detailVC = (UserDetailController *)segue.destinationViewController;
+    UserCell *cell = (UserCell *)sender;
+    
+    detailVC.navigationItem.title = cell.info.login;
+    detailVC.userInfo = cell.info;
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(nullable id)sender {
+    UserCell *cell = (UserCell *)sender;
+    if (IsEmpty(cell.info)) {
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark - getter

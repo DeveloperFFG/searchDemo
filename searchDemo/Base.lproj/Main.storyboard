@@ -82,7 +82,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imgView" destination="frx-eC-OQx" id="1pv-Kx-zio"/>
-                                            <outlet property="login" destination="aq4-TA-UYD" id="9WZ-Th-kKB"/>
+                                            <outlet property="loginLabel" destination="aq4-TA-UYD" id="VsF-lz-TeV"/>
+                                            <segue destination="3om-qV-CIz" kind="show" id="vZo-q7-v8b"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -112,6 +113,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dft-Kh-gxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="282.39999999999998" y="83.208395802098963"/>
+        </scene>
+        <!--User Detail Controller-->
+        <scene sceneID="IqH-y7-YtI">
+            <objects>
+                <viewController id="3om-qV-CIz" customClass="UserDetailController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bET-W7-iXj"/>
+                        <viewControllerLayoutGuide type="bottom" id="wCy-sw-rdt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9mo-mR-JkM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-8f-f1W">
+                                <rect key="frame" x="137" y="164" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2Q6-Ga-THS"/>
+                                    <constraint firstAttribute="width" constant="100" id="onN-MX-NZ0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvE-j2-NuO">
+                                <rect key="frame" x="187" y="298" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTj-X6-k20">
+                                <rect key="frame" x="187" y="331" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VTj-X6-k20" firstAttribute="centerX" secondItem="9mo-mR-JkM" secondAttribute="centerX" id="1SI-Yp-Kuh"/>
+                            <constraint firstItem="hvE-j2-NuO" firstAttribute="centerX" secondItem="9mo-mR-JkM" secondAttribute="centerX" id="YDi-zI-Lib"/>
+                            <constraint firstItem="hvE-j2-NuO" firstAttribute="top" secondItem="D5b-8f-f1W" secondAttribute="bottom" constant="34" id="Yol-xL-MeC"/>
+                            <constraint firstItem="VTj-X6-k20" firstAttribute="top" secondItem="hvE-j2-NuO" secondAttribute="bottom" constant="33" id="qsS-4d-DI9"/>
+                            <constraint firstItem="D5b-8f-f1W" firstAttribute="centerX" secondItem="9mo-mR-JkM" secondAttribute="centerX" id="tr7-Vu-Bci"/>
+                            <constraint firstItem="D5b-8f-f1W" firstAttribute="top" secondItem="bET-W7-iXj" secondAttribute="bottom" constant="100" id="uTz-SK-g4X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="D5b-8f-f1W" id="VlU-h8-HBw"/>
+                        <outlet property="languageLabel" destination="VTj-X6-k20" id="XVP-in-Vwv"/>
+                        <outlet property="loginLabel" destination="hvE-j2-NuO" id="1FV-Fe-sIZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2NZ-qx-8CM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="82.3088455772114"/>
         </scene>
     </scenes>
 </document>

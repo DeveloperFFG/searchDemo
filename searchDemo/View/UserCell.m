@@ -11,7 +11,7 @@
 
 @interface UserCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
-@property (weak, nonatomic) IBOutlet UILabel *login;
+@property (weak, nonatomic) IBOutlet UILabel *loginLabel;
 
 @end
 
@@ -32,7 +32,7 @@
     _info = info;
     
     [self.imgView sd_setImageWithURL:[NSURL URLWithString:info.avatar_url] placeholderImage:PLACEHOLDERIMAGE options:SDWebImageRetryFailed | SDWebImageLowPriority];
-    self.login.text = info.login;
+    self.loginLabel.text = info.login;
 }
 
 @end

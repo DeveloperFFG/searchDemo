@@ -16,6 +16,9 @@
 		29F001B31EB1B38E002CCC53 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F001B21EB1B38E002CCC53 /* NetworkManager.m */; };
 		29F001B81EB1B793002CCC53 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F001B71EB1B793002CCC53 /* UserInfo.m */; };
 		29F001BE1EB1B82C002CCC53 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F001BD1EB1B82C002CCC53 /* UserCell.m */; };
+		29F001C11EB1C3B2002CCC53 /* UserDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F001C01EB1C3B2002CCC53 /* UserDetailController.m */; };
+		29F001C41EB1C571002CCC53 /* LanguageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F001C31EB1C571002CCC53 /* LanguageCell.m */; };
+		29F001C71EB1CA56002CCC53 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F001C61EB1CA56002CCC53 /* Report.m */; };
 		A8AFCB64FCC889DEAF435CCE /* libPods-searchDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F1749E55043CC99D78E142 /* libPods-searchDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,12 @@
 		29F001B71EB1B793002CCC53 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		29F001BC1EB1B82C002CCC53 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
 		29F001BD1EB1B82C002CCC53 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		29F001BF1EB1C3B2002CCC53 /* UserDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailController.h; sourceTree = "<group>"; };
+		29F001C01EB1C3B2002CCC53 /* UserDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailController.m; sourceTree = "<group>"; };
+		29F001C21EB1C571002CCC53 /* LanguageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageCell.h; sourceTree = "<group>"; };
+		29F001C31EB1C571002CCC53 /* LanguageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageCell.m; sourceTree = "<group>"; };
+		29F001C51EB1CA56002CCC53 /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
+		29F001C61EB1CA56002CCC53 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
 		641976CD13101F742B604DBE /* Pods-searchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-searchDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-searchDemo/Pods-searchDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ABBEDD573DF8F3156651C153 /* Pods-searchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-searchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-searchDemo/Pods-searchDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +120,8 @@
 			children = (
 				29F001A31EB1ABAD002CCC53 /* SearchResultController.h */,
 				29F001A41EB1ABAD002CCC53 /* SearchResultController.m */,
+				29F001BF1EB1C3B2002CCC53 /* UserDetailController.h */,
+				29F001C01EB1C3B2002CCC53 /* UserDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +131,8 @@
 			children = (
 				29F001B61EB1B793002CCC53 /* UserInfo.h */,
 				29F001B71EB1B793002CCC53 /* UserInfo.m */,
+				29F001C51EB1CA56002CCC53 /* Report.h */,
+				29F001C61EB1CA56002CCC53 /* Report.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +162,8 @@
 				29F001991EB1AAEE002CCC53 /* LaunchScreen.storyboard */,
 				29F001BC1EB1B82C002CCC53 /* UserCell.h */,
 				29F001BD1EB1B82C002CCC53 /* UserCell.m */,
+				29F001C21EB1C571002CCC53 /* LanguageCell.h */,
+				29F001C31EB1C571002CCC53 /* LanguageCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,7 +311,10 @@
 				29F001B31EB1B38E002CCC53 /* NetworkManager.m in Sources */,
 				29F0018D1EB1AAEE002CCC53 /* main.m in Sources */,
 				29F001A91EB1ABAD002CCC53 /* SearchResultController.m in Sources */,
+				29F001C71EB1CA56002CCC53 /* Report.m in Sources */,
 				29F001B81EB1B793002CCC53 /* UserInfo.m in Sources */,
+				29F001C11EB1C3B2002CCC53 /* UserDetailController.m in Sources */,
+				29F001C41EB1C571002CCC53 /* LanguageCell.m in Sources */,
 				29F001BE1EB1B82C002CCC53 /* UserCell.m in Sources */,
 				29F001AD1EB1AC0E002CCC53 /* AppDelegate.m in Sources */,
 			);

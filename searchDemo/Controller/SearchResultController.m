@@ -48,6 +48,13 @@
                                                  parameters:@{@"q":searchText}
                                                 finishBlock:^(id result, NSError *error) {
                                                     if (error) {
+                                                        // 由于搜索接口具有速率限制,请求过于频繁回报此错误
+                                                        // 授权按用户每分钟30次, 未授权用户每分钟10次
+                                                        if (error.code == -1011) {
+                                                            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"错误" message:@"请求过于频繁,请稍后再试" preferredStyle:UIAlertControllerStyleAlert];
+                                                            [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
+                                                            [self presentViewController:alertVC animated:YES completion:nil];
+                                                        }
                                                         DLog(@"%@",error);
                                                         // 可以显示提示框,提示请求失败原因...
                                                         return;

@@ -20,16 +20,21 @@
 }
 
 - (void)requestWithMethod:(GFRequestMethod)method URLString:(NSString *)URLString parameters:(id)parameters finishBlock:(void (^)(id result, NSError *error))finished {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     if (method == GET) {
         [self GET:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             finished(responseObject, nil);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             finished(nil, error);
         }];
     } else {
         [self POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             finished(responseObject, nil);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             finished(nil, error);
         }];
     }
